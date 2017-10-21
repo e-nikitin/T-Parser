@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RstUa extends Model
+class Brand extends Model
 {
-    protected $table = 'rst_ua';
+    protected $table = 'car_brands';
     public $timestamps = false;
-
 }
