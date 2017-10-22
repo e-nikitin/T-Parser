@@ -19,13 +19,15 @@ class CreateRstUa extends Migration
             $table->float('price');
             $table->integer('year_issue')->nullable();
             $table->double('engine');
-            $table->date('upload_date');
+            $table->string('kpp',20);
             $table->string('carcase_type');
+            $table->string('region',20);
+            $table->date('upload_date');
             $table->integer('t_km')->default(0);
             $table->integer('service_id');
             $table->string('phone',20)->nullable();
-            $table->string('photo',100)->default('nophoto.png');
-            $table->string('link', 100);
+            $table->string('photo',70)->default('nophoto.png');
+            $table->string('link', 150);
             $table->timestamps();
         });
     }

@@ -37,7 +37,7 @@ class RST extends Command
         try{
             $this->runParse();
         }catch (\Exception $e){
-            dd($e->getLine(), $e->getMessage(), $e->getFile());
+            dd($e->getMessage(), $e->getFile(), $e->getLine());
         }
     }
 
