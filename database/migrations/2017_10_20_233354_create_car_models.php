@@ -15,7 +15,7 @@ class CreateCarModels extends Migration
     public function up()
     {
         Schema::create('car_models', function (Blueprint $table) {
-            $table->integer('id');
+            $table->integer('id')->unique();
             $table->string('model');
             $table->integer('carcas_type');
 

@@ -40,8 +40,8 @@ class AutoRiaAPI extends Model
     }
 
     //Получить все модели с их id
-    public function getAllModelsWithIds() {
-        $url = "https://developers.ria.com/auto/categories/1/marks?api_key=$this->API_KEY";
+    public function getModelsByMarkId($categoryid,$markid) {
+        $url = "https://developers.ria.com/auto/categories/$categoryid/marks/$markid/models/_group?api_key=$this->API_KEY";
         return $this->APIquery($url);
     }
 

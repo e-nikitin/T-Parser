@@ -16,7 +16,7 @@ class AutoRiaController extends Controller
 
     public function index() {
 
-        dd(new CarModelsTableSeeder());
+
 
 
       $this->AutoriaAPI = new AutoriaAPI();
@@ -27,16 +27,9 @@ class AutoRiaController extends Controller
      //   $cars = array_slice($cars,0,5);
        // dump($cars);
       // dd($this->AutoriaAPI->getCarInfoById(20621400));
-      //dd($this->AutoriaAPI->getAllMarksWithIds(6));
+      dd($this->AutoriaAPI->getModelsByMarkId(1,84));
 
-        $passengerCars=$this->AutoriaAPI->getAllMarksWithIds(1); //Марки легковых авто
-        foreach ($passengerCars as $passengerCar) {
-            DB::table('car_models')->insert([
-                'id' => $passengerCar['value'],
-                'model' => $passengerCar['name'],
-                'carcas_type' => 1,
-            ]);
-        }
+
 
       /*  foreach ($cars as $car) {
             dump($this->AutoriaAPI->getCarInfoById($car)['markName']);
