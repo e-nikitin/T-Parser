@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Libs\Autoria\AutoriaAPI as AutoriaAPI;
 
 class CreateCarModels extends Migration
 {
@@ -14,8 +15,10 @@ class CreateCarModels extends Migration
     public function up()
     {
         Schema::create('car_models', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id');
             $table->string('model');
+            $table->integer('carcas_type');
+
         });
     }
 
