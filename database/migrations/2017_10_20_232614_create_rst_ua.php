@@ -25,7 +25,7 @@ class CreateRstUa extends Migration
             $table->date('upload_date');
             $table->integer('t_km')->default(0);
             $table->integer('service_id');
-            $table->string('phone',20)->nullable();
+            $table->string('phone',140)->nullable();
             $table->string('photo',70)->default('nophoto.png');
             $table->string('link', 150);
             $table->timestamps();

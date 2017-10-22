@@ -43,7 +43,7 @@ class RST extends Command
 
     protected function runParse(){
         $rst = new RSTParser();
-        $rst->getAds();
+        dd($rst->getAds());
 
     }
 }
